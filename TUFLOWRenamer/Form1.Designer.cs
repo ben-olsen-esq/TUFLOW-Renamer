@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbFind = new System.Windows.Forms.TextBox();
             this.tbReplace = new System.Windows.Forms.TextBox();
             this.lbFind = new System.Windows.Forms.Label();
@@ -142,6 +143,7 @@
             this.Controls.Add(this.lbFind);
             this.Controls.Add(this.tbReplace);
             this.Controls.Add(this.tbFind);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(650, 600);
             this.MinimumSize = new System.Drawing.Size(650, 600);

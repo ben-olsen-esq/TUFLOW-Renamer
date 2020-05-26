@@ -287,6 +287,8 @@ namespace TUFLOWRenamer
             replacedFiles.Clear();
             oldReplacedFiles.Clear();
             filestodelete.Clear();
+
+            UpdateTree();
         }
     }
 }
