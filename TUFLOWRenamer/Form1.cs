@@ -259,14 +259,27 @@ namespace TUFLOWRenamer
 
                 if (confirmResult == DialogResult.No)
                     return;
+                try 
+                {
+                    foreach (string s in filestodelete)
+                        File.Delete(s);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                }
 
-                foreach (string s in filestodelete)
-                    File.Delete(s);
-            }
-
-            for(int x = 0; x < replacedFiles.Count; x++)
+            try
             {
-                File.Move(oldReplacedFiles[x], replacedFiles[x]);
+                for (int x = 0; x < replacedFiles.Count; x++)
+                {
+                    File.Move(oldReplacedFiles[x], replacedFiles[x]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
             MessageBox.Show("Files Renamed Successfully!");
